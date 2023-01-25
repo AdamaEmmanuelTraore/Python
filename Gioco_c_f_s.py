@@ -1,10 +1,13 @@
 # [ita] GIOCO: CARTA, FORBICE E SASSO / [fr] JEUX: PIERRE, FEUILLE, CISEAUX
 ## [ita] Ps: POTEVO USARE L'ISTRUZIONE WHILE INVECE DELLA CONDIZIONE IF/ELSE PER RENDERLO PIU SMART / [fr] Ps: JE POUVAIS UTILISER L'INSTRUCTIONS WHILE AU LIEU DE LA CONDITION IF/ELSE POUR RENDRE LE JEUX PLUS INTELLIGENT
+import random
+
+
 user = input('Inserisci il tuo nome\n')
 print('\n Iniziamo!\n')
 print('Ora è il turno della macchina\n')
 scelte = ['carta', 'forbice', 'sasso']
-scelta_macchina = scelte[1]
+scelta_macchina = random.choice(scelte)
 print('La macchina ha scelto\n')
 x = input('Ora tocca a te ' + str(user) + ' cosa scegli fra carta, forbice, sasso?\n')
 if x == scelta_macchina and x != scelte[1] and x != scelte[2]:
